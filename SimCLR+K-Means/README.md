@@ -27,10 +27,23 @@ run the following command to perform this method on Cotton Dataset:
 ```shell
 python simclr-cotton.py --config_env configs/your_env.yml --config_exp configs/pretext/simclr_cotton.yml
 ```
+The pretext task used is instance discrimination and selection of positive pairs is crucial in this pretext task for better results. Many different ways of selecting positive pairs were explored and some of them can be found in the folder 'pretext_configs'.
+
 
 After Running the SimCLR technique, the embeddings from the trained model are saved in the folder 'results'. They are clustered using
 ```shell
 python utils/k_means.py
 ```
 
-The above command saves the T-SNE plot of the embeddings formed. Below is one example.
+The above command saves the T-SNE plot of the embeddings formed. Below is one example where only one frame is taken from the video and its crops(crops are made such that it has most part as fiber) are taken as positive pairs yeilds good accuracy of 74%.
+
+<table>
+  <tr>
+    <td align="center">Ground Truth Labels</td>
+    <td align="center">K-Means Predicted Labels</td>
+  </tr>
+  <tr> 
+    <td align="center"><img src="https://github.com/rahultejagorantala/Unsupervised_Cotton_Fiber/blob/main/SimCLR%2BK-Means/images/t-SNE-Ground%20Truth-perplexity%20-%20250.png" width=150 height=150 ></td>
+    <td align="center"><img src="https://github.com/rahultejagorantala/Unsupervised_Cotton_Fiber/blob/main/SimCLR%2BK-Means/images/t-SNE%20faiss%20K-means%2C%20Acc%20-%200.74-perplexity%20-%20250.png" width=150 height=150 ></td>
+  </tr>
+ </table>
