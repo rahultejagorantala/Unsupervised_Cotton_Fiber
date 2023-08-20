@@ -1,0 +1,1 @@
+simclr.py --config_env configs/env.yml --config_exp configs/pretext/simclr_cifar20.yml

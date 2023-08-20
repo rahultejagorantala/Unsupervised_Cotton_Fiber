@@ -1,0 +1,73 @@
+# Setup
+setup: simclr
+
+# Model
+backbone: resnet50
+model_kwargs:
+   head: mlp   #check
+   features_dim: 128
+
+predict_kwargs:
+   multi_crop_predict: False
+   num_of_crops: 5
+
+# Dataset
+train_db_name: synthetic_cotton
+val_db_name: synthetic_cotton
+num_classes: 2
+basefolder: 'Synthetic-240'
+train_length: 1000
+val_length: 200
+
+get_embeddings: False
+embedding_dim: 2048
+train_last_only : False
+pretrained_resnet50 : False
+
+# Loss
+criterion: simclr
+criterion_kwargs:
+   temperature: 0.1 
+
+# Hyperparameters
+epochs: 100
+optimizer: sgd
+optimizer_kwargs:
+   nesterov: False
+   weight_decay: 0.0001 
+   momentum: 0.9
+   lr: 0.4
+scheduler: cosine
+scheduler_kwargs:
+   lr_decay_rate: 0.1
+batch_size: 64
+num_workers: 8
+
+# Transformations
+augmentation_strategy: none 
+augmentation_kwargs:
+   crop_size: 240
+   num_of_crops: 20
+   gaussian_kernel_size: 5
+   noise_threshold: 0.015
+   random_resized_crop:
+      size: 240
+      scale: [0.2, 1.0]
+   color_jitter_random_apply:
+      p: 0.8
+   color_jitter:
+      brightness: 0.4
+      contrast: 0.4
+      saturation: 0.4
+      hue: 0.1
+   random_grayscale: 
+      p: 0.2
+   normalize:
+      mean: [0.6101, 0.6101, 0.6101]
+      std: [0.1147, 0.1147, 0.1147]
+
+transformation_kwargs:
+   crop_size: 240
+   normalize:
+      mean: [0.6101, 0.6101, 0.6101]
+      std: [0.1147, 0.1147, 0.1147]
