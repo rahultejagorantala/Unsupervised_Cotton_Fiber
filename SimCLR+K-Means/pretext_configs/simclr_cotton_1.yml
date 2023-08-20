@@ -1,0 +1,73 @@
+# Setup
+setup: simclr
+
+# Model
+backbone: resnet50
+model_kwargs:
+   head: mlp
+   features_dim: 128
+
+# Dataset
+train_db_name: cotton
+val_db_name: cotton
+num_classes: 2
+basefolder: 'cotton'
+train_length: 100000
+val_length: 30000
+
+get_embeddings: True
+embedding_dim: 2048
+train_last_only : False
+pretrained_resnet50 : False
+
+predict_kwargs:
+   multi_crop_predict: True
+   num_of_crops: 5
+
+# Loss
+criterion: simclr
+criterion_kwargs:
+   temperature: 0.1 
+
+# Hyperparameters
+epochs: 200
+optimizer: sgd
+optimizer_kwargs:
+   nesterov: False
+   weight_decay: 0.0001 
+   momentum: 0.9
+   lr: 0.4
+scheduler: cosine
+scheduler_kwargs:
+   lr_decay_rate: 0.1
+batch_size: 256
+num_workers: 8
+
+# Transformations
+augmentation_strategy: select_crop 
+augmentation_kwargs:
+   crop_size: 100
+   num_of_crops: 5
+   gaussian_kernel_size: 5
+   noise_threshold: 0.015
+   random_resized_crop:
+      size: 100
+      scale: [0.2, 1.0]
+   color_jitter_random_apply:
+      p: 0.8
+   color_jitter:
+      brightness: 0.4
+      contrast: 0.4
+      saturation: 0.4
+      hue: 0.1
+   random_grayscale: 
+      p: 0.2
+   normalize:
+      mean: [0.4914, 0.4822, 0.4465]
+      std: [0.2023, 0.1994, 0.2010]
+
+transformation_kwargs:
+   crop_size: 100
+   normalize:
+      mean: [0.4914, 0.4822, 0.4465]
+      std: [0.2023, 0.1994, 0.2010]
