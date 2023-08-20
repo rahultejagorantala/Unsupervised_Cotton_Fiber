@@ -1,9 +1,8 @@
 # SimCLR_K-Means Implementation for Cotton Fiber Dataset.
 
 
-This repo contains the Pytorch implementation of the paper applying some additional modifications to fit out dataset :
-> [**SCAN: Learning to Classify Images without Labels**](https://arxiv.org/pdf/2005.12320.pdf)
-> _and the main source code is available [here](https://github.com/wvangansbeke/Unsupervised-Classification/tree/master)_
+This repo contains the Pytorch implementation of _[SimCLR](https://arxiv.org/pdf/2002.05709.pdf)_ paper applying some additional modifications to fit out dataset :
+> _and the main source code is available [here](https://github.com/wvangansbeke/Unsupervised-Classification/tree/master)_.
 
 
 ## Installation requirements
@@ -28,3 +27,10 @@ run the following command to perform this method on Cotton Dataset:
 ```shell
 python simclr-cotton.py --config_env configs/your_env.yml --config_exp configs/pretext/simclr_cotton.yml
 ```
+
+After Running the SimCLR technique, the embeddings from the trained model are saved in the folder 'results'. They are clustered using
+```shell
+python utils/k_means.py
+```
+
+The above command saves the T-SNE plot of the embeddings formed. Below is one example.
