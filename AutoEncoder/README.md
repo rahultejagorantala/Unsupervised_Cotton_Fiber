@@ -11,9 +11,9 @@ Below are the examples of reconstructed images in DTD dataset. After training cl
 
 <table>
   <tr> 
-    <td align="center"><img src="https://github.com/rahultejagorantala/Unsupervised_Cotton_Fiber/blob/main/AutoEncoder/Images/epoch%20-%200.png" width=300 height=100 ></td>
-    <td align="center"><img src="https://github.com/rahultejagorantala/Unsupervised_Cotton_Fiber/blob/main/AutoEncoder/Images/epoch%20-%201000.png" width=300 height=100 ></td>
-    <td align="center"><img src="https://github.com/rahultejagorantala/Unsupervised_Cotton_Fiber/blob/main/AutoEncoder/Images/epoch%20-%202000.png" width=300 height=100 ></td>
+    <td align="center"><img src="https://github.com/rahultejagorantala/Unsupervised_Cotton_Fiber/blob/main/AutoEncoder/Images/epoch%20-%200.png" width=300 height=200 ></td>
+    <td align="center"><img src="https://github.com/rahultejagorantala/Unsupervised_Cotton_Fiber/blob/main/AutoEncoder/Images/epoch%20-%201000.png" width=300 height=200 ></td>
+    <td align="center"><img src="https://github.com/rahultejagorantala/Unsupervised_Cotton_Fiber/blob/main/AutoEncoder/Images/epoch%20-%202000.png" width=300 height=200 ></td>
   </tr>
  </table>
  
