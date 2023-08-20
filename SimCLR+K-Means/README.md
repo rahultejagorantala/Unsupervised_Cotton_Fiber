@@ -35,7 +35,23 @@ After Running the SimCLR technique, the embeddings from the trained model are sa
 python utils/k_means.py
 ```
 
-The above command saves the T-SNE plot of the embeddings formed. Below is one example where only one frame is taken from the video and its crops(crops are made such that it has most part as fiber) are taken as positive pairs yeilds good accuracy of 74%.
+The above command also saves the T-SNE plot of the embeddings formed. 
+Below is one example where this technique performs really well on the synthetic fiber datset. positive pairs are two random fiber crops from the original image. This dataset can be created by using code from my other _[repo]().
+
+
+<table>
+  <tr>
+    <td align="center">Ground Truth Labels</td>
+    <td align="center">K-Means Predicted Labels</td>
+  </tr>
+  <tr> 
+    <td align="center"><img src="https://github.com/rahultejagorantala/Unsupervised_Cotton_Fiber/blob/main/SimCLR%2BK-Means/images/t-SNE-Ground%20Truth-perplexity%20-%2010.png" width=350 height=300 ></td>
+    <td align="center"><img src="https://github.com/rahultejagorantala/Unsupervised_Cotton_Fiber/blob/main/SimCLR%2BK-Means/images/t-SNE%20faiss%20K-means%2C%20Acc%20-%201.0-perplexity%20-%2010.png" width=350 height=300 ></td>
+  </tr>
+ </table>
+ 
+
+Below is one example where only one frame is taken from the cotton fiber video and its crops(crops are made such that it has most part as fiber) are taken as positive pairs yeilds good accuracy of 74%.
 
 <table>
   <tr>
