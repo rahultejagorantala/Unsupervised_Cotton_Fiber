@@ -36,7 +36,7 @@ python utils/k_means.py
 ```
 
 The above command also saves the T-SNE plot of the embeddings formed. 
-Below is one example where this technique performs really well on the synthetic fiber datset. positive pairs are two random fiber crops from the original image. This dataset can be created by using code from my other _[repo](https://github.com/rahultejagorantala/Synthetic_Fiber).
+Below is one example where this technique performs really well on the synthetic fiber datset. positive pairs are two random fiber crops from the original image. This dataset can be created by using code from my other [repo](https://github.com/rahultejagorantala/Synthetic_Fiber).
 
 
 <table>
