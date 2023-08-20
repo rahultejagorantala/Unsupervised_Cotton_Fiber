@@ -43,7 +43,7 @@ The above command saves the T-SNE plot of the embeddings formed. Below is one ex
     <td align="center">K-Means Predicted Labels</td>
   </tr>
   <tr> 
-    <td align="center"><img src="https://github.com/rahultejagorantala/Unsupervised_Cotton_Fiber/blob/main/SimCLR%2BK-Means/images/t-SNE-Ground%20Truth-perplexity%20-%20250.png" width=300 height=300 ></td>
-    <td align="center"><img src="https://github.com/rahultejagorantala/Unsupervised_Cotton_Fiber/blob/main/SimCLR%2BK-Means/images/t-SNE%20faiss%20K-means%2C%20Acc%20-%200.74-perplexity%20-%20250.png" width=300 height=300 ></td>
+    <td align="center"><img src="https://github.com/rahultejagorantala/Unsupervised_Cotton_Fiber/blob/main/SimCLR%2BK-Means/images/t-SNE-Ground%20Truth-perplexity%20-%20250.png" width=350 height=300 ></td>
+    <td align="center"><img src="https://github.com/rahultejagorantala/Unsupervised_Cotton_Fiber/blob/main/SimCLR%2BK-Means/images/t-SNE%20faiss%20K-means%2C%20Acc%20-%200.74-perplexity%20-%20250.png" width=350 height=300 ></td>
   </tr>
  </table>
